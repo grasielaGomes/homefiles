@@ -2,7 +2,7 @@ import { Flex, Text, Button } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 
 export const Header = () => (
-  <Flex justifyContent="space-between">
+  <Flex justifyContent="space-between" align="center">
     <Flex gap={1}>
       <Text fontSize="lg" as="b">
         Hi Adam,
@@ -17,8 +17,9 @@ export const Header = () => (
       borderRightRadius="none"
       paddingRight="14"
       marginRight="-6"
+      textTransform="uppercase"
     >
-      VIEW
+      view
     </Button>
   </Flex>
 );
