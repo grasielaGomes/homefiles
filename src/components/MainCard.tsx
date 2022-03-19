@@ -8,7 +8,7 @@ export const MainCard = ({
   children,
   width = "100%",
 }: IMainCard) => (
-  <Box bg="gray.100" w={width} boxShadow="base">
+  <Box bg="gray.100" w={width} boxShadow="base" >
     <MainCardHeader icon={icon} title={title} />
     {children}
   </Box>
