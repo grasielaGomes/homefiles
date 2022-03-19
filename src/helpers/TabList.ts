@@ -1,0 +1,1 @@
+export const tabList = ["details", "client", "team"];
