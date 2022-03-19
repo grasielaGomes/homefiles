@@ -5,11 +5,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  Input,
   Button,
 } from "@chakra-ui/react";
 import { IDrawerContainer } from "../../interfaces/Drawer.interface";
+import { CustomDrawerHeader } from "./CustomDrawerHeader";
+import { DrawerTab } from "./DrawerTab";
 
 export const DrawerContainer = ({ isOpen, onClose, btnRef }: IDrawerContainer) => (
   <Drawer
@@ -17,14 +17,16 @@ export const DrawerContainer = ({ isOpen, onClose, btnRef }: IDrawerContainer) =
     placement="left"
     onClose={onClose}
     finalFocusRef={btnRef}
+    size="md"
   >
     <DrawerOverlay />
-    <DrawerContent>
-      <DrawerCloseButton />
-      <DrawerHeader>Create your account</DrawerHeader>
+    <DrawerContent bg="gray.50">
+      <DrawerHeader bg="white" px={4}>
+        <CustomDrawerHeader />
+      </DrawerHeader>
 
-      <DrawerBody>
-        <Input placeholder="Type here..." />
+      <DrawerBody padding={0}>
+        <DrawerTab />
       </DrawerBody>
 
       <DrawerFooter>
