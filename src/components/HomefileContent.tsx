@@ -1,4 +1,5 @@
 import { Box, Grid } from "@chakra-ui/react";
+import { properties } from "../helpers/Properties";
 import { RoundedButton, HouseCard } from "./";
 
 export const HomefileContent = () => (
@@ -10,8 +11,17 @@ export const HomefileContent = () => (
       rightRadius="full"
       marginLeft="-4"
     />
-    <Grid>
-      <HouseCard />
+    <Grid mt={4}>
+      {properties.map(({ imageUrl, imageAlt, title, address, city, state }) => (
+        <HouseCard
+          imageUrl={imageUrl}
+          imageAlt={imageAlt}
+          title={title}
+          address={address}
+          city={city}
+          state={state}
+        />
+      ))}
     </Grid>
   </Box>
 );
