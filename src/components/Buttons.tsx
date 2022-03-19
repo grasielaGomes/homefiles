@@ -1,6 +1,11 @@
 import { AddIcon } from "@chakra-ui/icons";
-import { Button } from "@chakra-ui/react";
-import { IButton, IRoundedButton } from "../interfaces/Buttons.interface";
+import { Button, IconButton } from "@chakra-ui/react";
+import {
+  IButton,
+  IIconButton,
+  IRoundedButton,
+} from "../interfaces/Buttons.interface";
+import { MoreIcon } from "./icons";
 
 export const OutlinedButton = ({ text }: IButton) => (
   <Button
@@ -39,4 +44,14 @@ export const RoundedButton = ({
   >
     {text}
   </Button>
+);
+
+export const MoreButton = ({ size = "lg", aria = "Know more" }: IIconButton) => (
+  <IconButton
+    aria-label={aria}
+    icon={<MoreIcon />}
+    variant="ghost"
+    size={size}
+    isRound={false}
+  />
 );

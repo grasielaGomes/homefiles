@@ -11,3 +11,8 @@ export interface IRoundedButton extends IButton {
   marginRight?: string | string[];
   marginLeft?: string | string[];
 }
+
+export interface IIconButton {
+  size?: string;
+  aria?: string;
+}
