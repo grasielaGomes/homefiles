@@ -1,0 +1,1 @@
+export const detailsAddress = ["address", "legal address"];
