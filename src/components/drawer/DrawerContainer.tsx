@@ -8,8 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { IDrawerContainer } from "../../interfaces/Drawer.interface";
-import { CustomDrawerHeader } from "./CustomDrawerHeader";
-import { DrawerTab } from "./DrawerTab";
+import { CustomDrawerHeader, DrawerTab } from "./";
 
 export const DrawerContainer = ({ isOpen, onClose, btnRef }: IDrawerContainer) => (
   <Drawer
