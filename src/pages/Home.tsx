@@ -3,7 +3,7 @@ import {
   Flex,
   Text,
   VStack,
-  Code,
+  Stack,
   Grid,
   IconButton,
 } from "@chakra-ui/react";
@@ -12,23 +12,23 @@ import { HomeIcon, MoreIcon, SendIcon } from "../components/icons";
 import { MainCard } from "../components/MainCard";
 
 export const Home = () => (
-  <Box textAlign="start" fontSize="xl" bg="gray.300" minH={1024} py={4} px={6}>
+  <Box textAlign="start" fontSize="xl" bg="gray.300" minH={1024} py={4} px={[2,4]}>
     <VStack spacing={3} align="stretch">
       <Header />
-      <Flex gap={2}>
+      <Stack direction={["column", "row"]} spacing={2}>
         <MainCard
           children={<Text>Hello</Text>}
           icon={<HomeIcon />}
           title="My Homefiles"
-          width="75%"
+          width={["100%", "70%"]}
         />
         <MainCard
           children={<Text>Hello</Text>}
           icon={<SendIcon />}
           title="Send Document"
-          width="25%"
+          width={["100%", "30%"]}
         />
-      </Flex>
+      </Stack>
     </VStack>
   </Box>
 );
