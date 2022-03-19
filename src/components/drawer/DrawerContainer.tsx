@@ -5,10 +5,9 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  Button,
 } from "@chakra-ui/react";
 import { IDrawerContainer } from "../../interfaces/Drawer.interface";
-import { CustomDrawerHeader, DrawerTab } from "./";
+import { CustomDrawerFooter, CustomDrawerHeader, DrawerTab } from "./";
 
 export const DrawerContainer = ({ isOpen, onClose, btnRef }: IDrawerContainer) => (
   <Drawer
@@ -28,11 +27,8 @@ export const DrawerContainer = ({ isOpen, onClose, btnRef }: IDrawerContainer) =
         <DrawerTab />
       </DrawerBody>
 
-      <DrawerFooter>
-        <Button variant="outline" mr={3} onClick={onClose}>
-          Cancel
-        </Button>
-        <Button colorScheme="blue">Save</Button>
+      <DrawerFooter padding={0}>
+        <CustomDrawerFooter />
       </DrawerFooter>
     </DrawerContent>
   </Drawer>
