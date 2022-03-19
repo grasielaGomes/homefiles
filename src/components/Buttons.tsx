@@ -21,6 +21,7 @@ export const OutlinedButton = ({ text }: IButton) => (
 
 export const RoundedButton = ({
   text,
+  ref,
   handleClick,
   leftRadius = "none",
   rightRadius = "none",
@@ -30,6 +31,7 @@ export const RoundedButton = ({
   paddingLeft = "0",
 }: IRoundedButton) => (
   <Button
+    ref={ref}
     leftIcon={<AddIcon />}
     colorScheme="blue"
     variant="solid"
@@ -46,7 +48,10 @@ export const RoundedButton = ({
   </Button>
 );
 
-export const MoreButton = ({ size = "lg", aria = "Know more" }: IIconButton) => (
+export const MoreButton = ({
+  size = "lg",
+  aria = "Know more",
+}: IIconButton) => (
   <IconButton
     aria-label={aria}
     icon={<MoreIcon />}

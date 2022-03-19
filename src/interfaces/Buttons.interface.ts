@@ -1,5 +1,6 @@
 export interface IButton {
   text: string;
+  ref?: React.Ref<any>;
   handleClick?: () => void;
 }
 
