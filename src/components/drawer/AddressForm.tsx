@@ -33,10 +33,10 @@ export const AddressForm = ({ title, sameAsAbove }: IAddressForm) => (
       <InputGroup gap={2}>
         <Input placeholder="Address" size="md" bg="white" borderRadius="xs" />
         <IconButton
-          borderColor="blue.300"
+          colorScheme="cyan"
           aria-label="Add new address"
           variant="outline"
-          icon={<AddIcon color="blue.300" />}
+          icon={<AddIcon />}
           borderRadius="xs"
         />
       </InputGroup>

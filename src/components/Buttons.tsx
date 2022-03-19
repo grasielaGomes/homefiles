@@ -7,11 +7,11 @@ import {
 } from "../interfaces/Buttons.interface";
 import { MoreIcon } from "./icons";
 
-export const OutlinedButton = ({ text }: IButton) => (
+export const OutlinedButton = ({ text, width = "100%", }: IButton) => (
   <Button
-    colorScheme="blue"
+    colorScheme="cyan"
     bg="white"
-    w="100%"
+    w={width}
     variant="outline"
     rounded="none"
   >

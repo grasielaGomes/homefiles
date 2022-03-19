@@ -12,17 +12,18 @@ import { AddressForm } from "./AddressForm";
 
 export const Tab1 = () => (
   <VStack spacing={2} align="stratch">
-    <Box bg="gray.300" h={200}>
+    <Box bg="gray.200" h={200}>
       <Box display="flex" justifyContent="end" mb={4}>
         <IconButton
-          icon={<EditIcon color="blue.300" />}
+          colorScheme="cyan"
+          icon={<EditIcon />}
           aria-label="Edit icon"
           variant="ghost"
           _hover={{ bg: "transparent" }}
         />
       </Box>
       <Container centerContent>
-        <HomeIcon2 />
+        <HomeIcon2 color="gray.300" />
         <Text fontSize="xs">Add photo</Text>
       </Container>
     </Box>
