@@ -48,15 +48,13 @@ export const RoundedButton = ({
   </Button>
 );
 
-export const MoreButton = ({
-  size = "lg",
-  aria = "Know more",
-}: IIconButton) => (
+export const MoreButton = ({ size = "lg", aria = "Know more" }: IIconButton) => (
   <IconButton
     aria-label={aria}
     icon={<MoreIcon />}
     variant="ghost"
     size={size}
     isRound={false}
+    _hover={{ color: "blue.300" }}
   />
 );

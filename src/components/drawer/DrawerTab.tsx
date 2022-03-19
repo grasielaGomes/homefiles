@@ -4,9 +4,10 @@ import { Tab1 } from "./Tab1";
 
 export const DrawerTab = () => (
   <Tabs variant="unstyled">
-    <TabList px={2} bg="white">
+    <TabList px={4} bg="white">
       {tabList.map((tab) => (
         <Tab
+          key={tab}
           textTransform="uppercase"
           as="b"
           fontSize="sm"
@@ -20,7 +21,7 @@ export const DrawerTab = () => (
     </TabList>
 
     <TabPanels padding={0}>
-      <TabPanel py={0} px={2}>
+      <TabPanel py={0} px={4}>
         <Tab1 />
       </TabPanel>
       <TabPanel>
