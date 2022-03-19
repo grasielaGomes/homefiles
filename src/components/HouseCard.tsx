@@ -1,6 +1,5 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Text, Stack, Flex } from "@chakra-ui/react";
 import { MoreButton } from "./";
-
 
 export const HouseCard = () => {
   const property = {
@@ -13,11 +12,23 @@ export const HouseCard = () => {
   };
 
   return (
-    <Box maxW="sm" shadow="base" overflow="hidden">
-      <Box h={10}>
-        <MoreButton/>
+    <Box maxW="200" shadow="base" overflow="hidden" bg="white">
+      <Box h={8} display="flex" justifyContent="end" alignItems="center" pr={2}>
+        <MoreButton size="small" />
       </Box>
       <Image src={property.imageUrl} alt={property.imageAlt} />
+      <Stack px={2} my={4}>
+        <Text textTransform="uppercase" fontSize="sm" as="b">
+          {property.title}
+        </Text>
+        <Box>
+          <Text fontSize="xs">{property.address}</Text>
+          <Flex gap="1">
+            <Text fontSize="xs">{property.city}</Text>
+            <Text fontSize="xs">{property.state}</Text>
+          </Flex>
+        </Box>
+      </Stack>
     </Box>
   );
-}
+};
