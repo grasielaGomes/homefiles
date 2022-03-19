@@ -1,4 +1,4 @@
 import { Icon } from "@chakra-ui/react";
 import { FcVoicePresentation } from "react-icons/fc";
 
-export const HomeIcon = () => <Icon as={FcVoicePresentation} />;
+export const InviteIcon = () => <Icon as={FcVoicePresentation} />;
