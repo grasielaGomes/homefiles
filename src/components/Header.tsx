@@ -13,6 +13,7 @@ export const Header = () => (
       text="view"
       marginRight={["-2", "-4"]}
       paddingRight={["6", "10"]}
+      paddingLeft="4"
       leftRadius="full"
     />
   </Flex>

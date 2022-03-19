@@ -1,6 +1,6 @@
-import { Flex, IconButton, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { IMainCardHeader } from "../interfaces/MainCardHeader.interface";
-import { MoreIcon } from "./icons";
+import { MoreButton } from "./";
 
 export const MainCardHeader = ({ icon, title }: IMainCardHeader) => (
   <Flex justifyContent="space-between" bg="white" align="center" pl={2}>
@@ -8,12 +8,6 @@ export const MainCardHeader = ({ icon, title }: IMainCardHeader) => (
       {icon}
       <Text fontSize="sm">{title}</Text>
     </Flex>
-    <IconButton
-      aria-label="Search database"
-      icon={<MoreIcon />}
-      variant="ghost"
-      size="lg"
-      isRound={false}
-    />
+    <MoreButton size="lg"/>
   </Flex>
 );

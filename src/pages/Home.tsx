@@ -1,15 +1,11 @@
+import { Box, VStack, Grid, GridItem } from "@chakra-ui/react";
 import {
-  Box,
-  Flex,
-  Text,
-  VStack,
-  Stack,
-  Grid,
-  IconButton,
-  Button,
-} from "@chakra-ui/react";
-import { Header, MainCard, OutlinedButton } from "../components";
-import { HomeIcon, MoreIcon, SendIcon } from "../components/icons";
+  Header,
+  MainCard,
+  OutlinedButton,
+  HomefileContent,
+} from "../components";
+import { HomeIcon, SendIcon } from "../components/icons";
 
 export const Home = () => (
   <Box
@@ -22,24 +18,28 @@ export const Home = () => (
   >
     <VStack spacing={3} align="stretch">
       <Header />
-      <Stack direction={["column", "row"]} spacing={2}>
-        <MainCard
-          children={<Text>Hello</Text>}
-          icon={<HomeIcon />}
-          title="My Homefiles"
-          width={["100%", "70%"]}
-        />
-        <MainCard
-          children={
-            <Box p={3}>
-              <OutlinedButton text="Set up document" />
-            </Box>
-          }
-          icon={<SendIcon />}
-          title="Send Document"
-          width={["100%", "30%"]}
-        />
-      </Stack>
+      <Grid templateColumns="repeat(8, 1fr)" gap={2} w="100%">
+        <GridItem colSpan={6} w="100%">
+          <MainCard
+            children={<HomefileContent />}
+            icon={<HomeIcon />}
+            title="My Homefiles"
+            width="100%"
+          />
+        </GridItem>
+        <GridItem colSpan={2} w="100%">
+          <MainCard
+            children={
+              <Box p={3}>
+                <OutlinedButton text="Set up document" />
+              </Box>
+            }
+            icon={<SendIcon />}
+            title="Send Document"
+            width="100%"
+          />
+        </GridItem>
+      </Grid>
     </VStack>
   </Box>
 );
