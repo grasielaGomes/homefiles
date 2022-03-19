@@ -1,6 +1,6 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { tabList } from "../../helpers/TabList";
-import { Tab1 } from "./Tab1";
+import { Tab1, Tab2 } from "./";
 
 export const DrawerTab = () => (
   <Tabs variant="unstyled">
@@ -11,9 +11,9 @@ export const DrawerTab = () => (
           textTransform="uppercase"
           as="b"
           fontSize="sm"
-          color="blue.300"
+          color="cyan.300"
           _focus={{ outline: "none" }}
-          _selected={{ color: "blue.500", borderBottom: "3px solid" }}
+          _selected={{ color: "cyan.500", borderBottom: "3px solid" }}
         >
           {tab}
         </Tab>
@@ -21,11 +21,11 @@ export const DrawerTab = () => (
     </TabList>
 
     <TabPanels padding={0}>
-      <TabPanel py={0} px={4}>
+      <TabPanel p={0} >
         <Tab1 />
       </TabPanel>
-      <TabPanel>
-        <p>two!</p>
+      <TabPanel p={0}>
+        <Tab2 />
       </TabPanel>
       <TabPanel>
         <p>three!</p>

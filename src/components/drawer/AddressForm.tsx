@@ -16,7 +16,7 @@ import { LocationIcon } from "../icons";
 export const AddressForm = ({ title, sameAsAbove }: IAddressForm) => (
   <Box>
     <Divider my={3} />
-    <Stack spacing={2}>
+    <Stack spacing={2} px={4}>
       <Flex justifyContent="space-between">
         <Flex gap={2} alignItems="center">
           <LocationIcon color="teal" />
@@ -25,8 +25,8 @@ export const AddressForm = ({ title, sameAsAbove }: IAddressForm) => (
           </Text>
         </Flex>
         {sameAsAbove && (
-          <Checkbox fontSize="small" color="gray.500">
-            Same as above
+          <Checkbox colorScheme="cyan">
+            <Text fontSize="xs">Same As Above</Text>
           </Checkbox>
         )}
       </Flex>

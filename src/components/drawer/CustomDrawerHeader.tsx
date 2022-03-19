@@ -6,6 +6,6 @@ export const CustomDrawerHeader = () => (
     <Button leftIcon={<PlusIcon />} variant="link" _focus={{ outline: "none" }}>
       New Homefile
     </Button>
-    <DrawerCloseButton color="blue.300" size="lg"/>
+    <DrawerCloseButton color="cyan.500" size="lg"/>
   </>
 );

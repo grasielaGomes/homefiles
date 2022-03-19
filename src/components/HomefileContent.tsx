@@ -9,7 +9,7 @@ export const HomefileContent = () => {
   return (
     <Box p={4} h={700}>
       <RoundedButton
-        ref={btnRef}
+        buttonRef={btnRef}
         text="new homefile"
         paddingLeft="4"
         paddingRight="4"
@@ -21,14 +21,16 @@ export const HomefileContent = () => {
       <Grid mt={4}>
         {properties.map(
           ({ imageUrl, imageAlt, title, address, city, state }) => (
-            <HouseCard
-              imageUrl={imageUrl}
-              imageAlt={imageAlt}
-              title={title}
-              address={address}
-              city={city}
-              state={state}
-            />
+            <Box key={title}>
+              <HouseCard
+                imageUrl={imageUrl}
+                imageAlt={imageAlt}
+                title={title}
+                address={address}
+                city={city}
+                state={state}
+              />
+            </Box>
           )
         )}
       </Grid>

@@ -1,7 +1,7 @@
 export interface IButton {
   text: string;
   width?: string | number;
-  ref?: React.Ref<any>;
+  buttonRef?: React.Ref<any>;
   handleClick?: () => void;
 }
 
