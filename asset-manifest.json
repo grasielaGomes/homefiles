@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/homefiles/static/js/main.bfa61950.js",
+    "index.html": "/homefiles/index.html",
+    "main.bfa61950.js.map": "/homefiles/static/js/main.bfa61950.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bfa61950.js"
+  ]
+}
