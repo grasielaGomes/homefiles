@@ -3,9 +3,9 @@ import { FcHome } from "react-icons/fc";
 import { BiHomeAlt } from "react-icons/bi";
 import { IIcons } from "../../interfaces/Icons.interface";
 
-export const HomeIcon = () => <Icon as={FcHome} />;
+export const ColorHomeIcon = () => <Icon as={FcHome} />;
 
-export const HomeIcon2 = ({
+export const HomeIcon = ({
   width = 20,
   height = 20,
   color = "gray.400",

@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { detailsAddress } from "../../helpers/DetailsAddress";
-import { HomeIcon2, EditIcon } from "../icons";
+import { HomeIcon, EditIcon } from "../icons";
 import { AddressForm } from "./AddressForm";
 
 export const Tab1 = () => (
@@ -25,7 +25,7 @@ export const Tab1 = () => (
           />
         </Box>
         <Container centerContent>
-          <HomeIcon2 color="gray.300" />
+          <HomeIcon color="gray.300" />
           <Text fontSize="xs">Add photo</Text>
         </Container>
       </Box>

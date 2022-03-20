@@ -5,7 +5,7 @@ import {
   OutlinedButton,
   HomefileContent,
 } from "../components";
-import { HomeIcon, SendIcon } from "../components/icons";
+import { ColorHomeIcon, SendIcon } from "../components/icons";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 export const Home = () => {
@@ -29,7 +29,7 @@ export const Home = () => {
           <GridItem colSpan={[1, 6]} w="100%">
             <MainCard
               children={<HomefileContent />}
-              icon={<HomeIcon />}
+              icon={<ColorHomeIcon />}
               title="My Homefiles"
               width="100%"
             />
