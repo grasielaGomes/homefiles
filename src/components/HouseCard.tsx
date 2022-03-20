@@ -1,4 +1,5 @@
-import { Box, Image, Text, Stack, Flex } from "@chakra-ui/react";
+import { Box, Image, Text, Stack, Flex, Skeleton } from "@chakra-ui/react";
+import { useImage } from "../hooks/useImage";
 import { IHouseCard } from "../interfaces/HouseCard.interface";
 import { MoreButton } from "./";
 
@@ -10,13 +11,18 @@ export const HouseCard = ({
   city,
   state,
 }: IHouseCard) => {
+  const { hasLoaded } = useImage(imageUrl);
   return (
     <Box maxW="200" shadow="base" overflow="hidden" bg="white">
       <Flex justifyContent="space-between" h={8} alignItems="center" pr={2}>
         <Box />
         <MoreButton size="small" />
       </Flex>
-      <Image src={imageUrl} alt={imageAlt} />
+      {hasLoaded ? (
+        <Image src={imageUrl} alt={imageAlt} />
+      ) : (
+        <Skeleton height="133px" width="200px"/>
+      )}
       <Stack px={2} my={4}>
         <Text textTransform="uppercase" fontSize="sm" as="b">
           {title}
