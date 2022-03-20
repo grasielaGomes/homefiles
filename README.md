@@ -15,7 +15,7 @@ https://grasielagomes.github.io/homefiles/
 
     $ npm start
 
-**Build**
+**Build and deploy**
 
-    $ npm run build
+    $ npm run deploy
 
