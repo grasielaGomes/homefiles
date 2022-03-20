@@ -15,7 +15,7 @@ export const DrawerContainer = ({ isOpen, onClose, btnRef }: IDrawerContainer) =
     placement="left"
     onClose={onClose}
     finalFocusRef={btnRef}
-    size="md"
+    size="sm"
   >
     <DrawerOverlay />
     <DrawerContent bg="gray.50">

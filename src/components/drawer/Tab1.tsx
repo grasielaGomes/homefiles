@@ -12,7 +12,7 @@ import { HomeIcon2, EditIcon } from "../icons";
 import { AddressForm } from "./AddressForm";
 
 export const Tab1 = () => (
-  <VStack spacing={2} align="stratch">
+  <VStack spacing={2} align="stratch" key="tab1">
     <Stack px={4} spacing={2}>
       <Box bg="gray.200" h={200}>
         <Box display="flex" justifyContent="end" mb={4}>
