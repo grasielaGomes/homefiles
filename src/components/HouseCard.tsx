@@ -12,9 +12,10 @@ export const HouseCard = ({
 }: IHouseCard) => {
   return (
     <Box maxW="200" shadow="base" overflow="hidden" bg="white">
-      <Box h={8} display="flex" justifyContent="end" alignItems="center" pr={2}>
+      <Flex justifyContent="space-between" h={8} alignItems="center" pr={2}>
+        <Box />
         <MoreButton size="small" />
-      </Box>
+      </Flex>
       <Image src={imageUrl} alt={imageAlt} />
       <Stack px={2} my={4}>
         <Text textTransform="uppercase" fontSize="sm" as="b">

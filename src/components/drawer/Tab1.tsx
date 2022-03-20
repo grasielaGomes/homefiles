@@ -1,6 +1,7 @@
 import {
   VStack,
   Box,
+  Flex,
   Text,
   Container,
   IconButton,
@@ -15,7 +16,8 @@ export const Tab1 = () => (
   <VStack spacing={2} align="stratch" key="tab1">
     <Stack px={4} spacing={2}>
       <Box bg="gray.200" h={200}>
-        <Box display="flex" justifyContent="end" mb={4}>
+        <Flex justifyContent="space-between" mb={4}>
+          <Box />
           <IconButton
             colorScheme="cyan"
             icon={<EditIcon />}
@@ -23,7 +25,7 @@ export const Tab1 = () => (
             variant="ghost"
             _hover={{ bg: "transparent" }}
           />
-        </Box>
+        </Flex>
         <Container centerContent>
           <HomeIcon color="gray.300" />
           <Text fontSize="xs">Add photo</Text>

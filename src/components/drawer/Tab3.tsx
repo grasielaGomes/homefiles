@@ -9,7 +9,8 @@ export const Tab3 = () => {
   const { height } = useWindowDimensions();
   return (
     <VStack spacing={2} align="stratch" key="tab3">
-      <Flex justifyContent="end" mt={2}>
+      <Flex justifyContent="space-between" mt={2}>
+        <Box />
         <RoundedButton
           text="team"
           paddingLeft="4"
