@@ -6,40 +6,48 @@ import {
   HomefileContent,
 } from "../components";
 import { HomeIcon, SendIcon } from "../components/icons";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
-export const Home = () => (
-  <Box
-    textAlign="start"
-    fontSize="xl"
-    bg="gray.300"
-    minH={1024}
-    py={4}
-    px={[2, 4]}
-  >
-    <VStack spacing={3} align="stretch">
-      <Header />
-      <Grid templateColumns="repeat(8, 1fr)" gap={2} w="100%">
-        <GridItem colSpan={6} w="100%">
-          <MainCard
-            children={<HomefileContent />}
-            icon={<HomeIcon />}
-            title="My Homefiles"
-            width="100%"
-          />
-        </GridItem>
-        <GridItem colSpan={2} w="100%">
-          <MainCard
-            children={
-              <Box p={3}>
-                <OutlinedButton text="Set up document" />
-              </Box>
-            }
-            icon={<SendIcon />}
-            title="Send Document"
-            width="100%"
-          />
-        </GridItem>
-      </Grid>
-    </VStack>
-  </Box>
-);
+export const Home = () => {
+  const { height } = useWindowDimensions();
+  return (
+    <Box
+      textAlign="start"
+      fontSize="xl"
+      bg="gray.300"
+      minH={height}
+      py={4}
+      px={[2, 4]}
+    >
+      <VStack spacing={3} align="stretch">
+        <Header />
+        <Grid
+          templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
+          gap={2}
+          w="100%"
+        >
+          <GridItem colSpan={[1, 6]} w="100%">
+            <MainCard
+              children={<HomefileContent />}
+              icon={<HomeIcon />}
+              title="My Homefiles"
+              width="100%"
+            />
+          </GridItem>
+          <GridItem colSpan={[1, 2]} w="100%">
+            <MainCard
+              children={
+                <Box p={3}>
+                  <OutlinedButton text="Set up document" />
+                </Box>
+              }
+              icon={<SendIcon />}
+              title="Send Document"
+              width="100%"
+            />
+          </GridItem>
+        </Grid>
+      </VStack>
+    </Box>
+  );
+};
